@@ -1,0 +1,26 @@
+{
+  "motives": [
+    {
+      "title": "Mut",
+      "descriptions": [
+        "Mut bedeuted Bla Bla"
+      ],
+      "queries": [
+        "courage",
+        "mut",
+        "bravery"
+      ]
+    },
+    {
+      "title": "Teamgeist",
+      "descriptions": [
+        "Teamgeist bedeuted Bla Bla"
+      ],
+      "queries": [
+        "teamgeist",
+        "team spirit",
+        "together"
+      ]
+    }
+  ]
+}
