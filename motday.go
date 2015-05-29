@@ -19,7 +19,7 @@ func photoHandler(w http.ResponseWriter, r *http.Request) {
 	if nil != err {
 		panic(err)
 	}
-	flickr := flickr.New("35227583b4cdcb7b48d64e693ce44b0e", "be6273e26e93b5f1")
+	flickr := flickr.New("133735227583b4cdcb7b48d64e693ce44b0e", "be6273e26e93b5f1")
 
 	motive := config.RandomMotive()
 	query := *motive.RandomQuery()
