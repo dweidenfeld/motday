@@ -1,25 +1,142 @@
 {
+  "flickr": {
+    "apiKey": "35227583b4cdcb7b48d64e693ce44b0e"
+  },
   "motives": [
+    {
+      "title": "Relevanz",
+      "descriptions": [
+        "WIR ENTWICKELN WAS MENSCHEN LIEBEN.",
+        "Wir erzeugen Relevanz",
+        "Nutze den richtigen Weg",
+        "Fokussiere Dich auf das relevante Ergebnis",
+        "Sei relevant - Leiste Deinen Beitrag für unsere Lösung Andere kopieren, was wir erschaffen",
+        "Wir entwickeln, was unsere Kunden wirklich nutzen"
+      ],
+      "queries": [
+        "relevancy",
+        "do right things",
+        "wrong way",
+        "focus"
+      ]
+    },
     {
       "title": "Mut",
       "descriptions": [
-        "Mut bedeuted Bla Bla"
+        "SEI KREATIVER ZERSTÖRER",
+        "Hinterfrage das Gegebene",
+        "Hinterfrage Dich selbst",
+        "Wir fördern kreative Intelligenz",
+        "Wir lassen Ideen stehen und reifen",
+        "Wir kämpfen für die beste Lösung",
+        "Wir entwickeln uns konstant weiter"
       ],
       "queries": [
         "courage",
-        "mut",
-        "bravery"
+        "bravery",
+        "intelligence",
+        "solution"
       ]
     },
     {
       "title": "Teamgeist",
       "descriptions": [
-        "Teamgeist bedeuted Bla Bla"
+        "EIN HERZ. EIN SCHLAG. EIN TEAM.",
+        "Wir alle sind das Herz von TWT",
+        "Wir wachsen miteinander, lernen voneinander",
+        "Wertschätzung und Unterstützung sind für uns selbstverständlich",
+        "Teile dein Wissen und deine Erfahrungen zum Vorteil aller",
+        "Jeder einzelne Beitrag zählt für unseren gemeinsamen Erfolg",
+        "Wir ermöglichen jedem erfolgreich zu sein",
+        "Wir sind stolz auf das, was wir schaffen"
       ],
       "queries": [
         "teamgeist",
         "team spirit",
-        "together"
+        "together",
+        "heart"
+      ]
+    },
+    {
+      "title": "Verantwortungsbewusstsein",
+      "descriptions": [
+        "GESTALTEN. WOLLEN.",
+        "Wir übernehmen Verantwortung für unsere Arbeit",
+        "Eigene Verantwortung übertragen wir nicht auf andere",
+        "An unseren Ergebnissen lassen wir uns messen",
+        "Trage die Konsequenzen für dein Handeln",
+        "Verantwortung übernehmen heißt gestalten können",
+        "Wir freuen uns über Verantwortung"
+      ],
+      "queries": [
+        "Verantwortungsbewusstsein",
+        "responsibility"
+      ]
+    },
+    {
+      "title": "Exzellente Qualität",
+      "descriptions": [
+        "BESSER IST GUT.",
+        "Fordere Qualität von Dir und anderen ein",
+        "Du bist stolz auf die Qualität Deiner Ergebnisse",
+        "Exzellenz prägt unsere Qualität",
+        "Wir schaffen immer die beste Lösung für unsere Kunden",
+        "Wir zeigen, wie es besser geht"
+      ],
+      "queries": [
+        "Qualität",
+        "quality",
+        "best solution"
+      ]
+    },
+    {
+      "title": "Leidenschaft",
+      "descriptions": [
+        "WIR BRENNEN FÜR UNSER TUN.",
+        "Leidenschaft ist unsere Motivation, unser Antrieb",
+        "Unsere Leidenschaft springt auf andere über",
+        "Lebe Leidenschaft, leiste Außergewöhnliches"
+      ],
+      "queries": [
+        "leidenschaft",
+        "passion"
+      ]
+    },
+    {
+      "title": "Führungsanspruch",
+      "descriptions": [
+        "SEI LEUCHTTURM. SEI KOMPASS.",
+        "Wir stärken Stärken",
+        "Wir fördern und fordern - individuell",
+        "Wir erkennen Potentiale und entfachen Leidenschaft",
+        "Wir leben konstruktives und offenes Feedback",
+        "Konflikte sind Chancen, die wir eingehen und fähig sind zu lösen",
+        "Unser Umgang miteinander ist vertrauensvoll, wertschätzend und fair"
+      ],
+      "queries": [
+        "Führungsanspruch",
+        "potential",
+        "individuality",
+        "chances",
+        "lighthouse"
+      ]
+    },
+    {
+      "title": "Partnerschaft",
+      "descriptions": [
+        "GEMEINSAM. ERFOLGREICH.",
+        "Wir begegnen uns und unseren Kunden respektvoll",
+        "Wir hören einander aktiv zu",
+        "Wir pflegen ein vertrauensvolles Miteinander",
+        "Herausforderungen meistern wir gemeinsam",
+        "Sei ein Partner, langfristig und nachhaltig"
+      ],
+      "queries": [
+        "Partnerschaft",
+        "partnership",
+        "friendship",
+        "listen each other",
+        "trust"
       ]
     }
   ]

@@ -9,11 +9,17 @@ import (
 
 // Config Model
 type Config struct {
-	Motives []Motive `json:"motives"`
+	Flickr  FlickrConf   `json:"flickr"`
+	Motives []MotiveConf `json:"motives"`
 }
 
-// Motive Model
-type Motive struct {
+// FlickrConf Model
+type FlickrConf struct {
+	APIKey string `json:"apiKey"`
+}
+
+// MotiveConf Model
+type MotiveConf struct {
 	Title        string   `json:"title"`
 	Descriptions []string `json:"descriptions"`
 	Queries      []string `json:"queries"`
@@ -31,12 +37,12 @@ func Load(file string) (*Config, error) {
 }
 
 // RandomMotive returns a random motive
-func (c *Config) RandomMotive() *Motive {
+func (c *Config) RandomMotive() *MotiveConf {
 	return &c.Motives[random(0, len(c.Motives))]
 }
 
 // RandomQuery returns a random query
-func (m *Motive) RandomQuery() *string {
+func (m *MotiveConf) RandomQuery() *string {
 	return &m.Queries[random(0, len(m.Queries))]
 }
 

@@ -3,6 +3,7 @@ package main
 import (
 	"html/template"
 	"net/http"
+	"strings"
 
 	"github.com/dweidenfeld/motday/config"
 	"github.com/dweidenfeld/motday/flickr"
@@ -19,10 +20,11 @@ func photoHandler(w http.ResponseWriter, r *http.Request) {
 	if nil != err {
 		panic(err)
 	}
-	flickr := flickr.New("133735227583b4cdcb7b48d64e693ce44b0e", "be6273e26e93b5f1")
+	flickr := flickr.New(config.Flickr.APIKey)
 
 	motive := config.RandomMotive()
-	query := *motive.RandomQuery()
+	query := strings.Join(motive.Queries, ", ")
+	//query := *motive.RandomQuery()
 
 	image, err := flickr.SearchRandom(query)
 	if nil != err {
@@ -42,6 +44,6 @@ func photoHandler(w http.ResponseWriter, r *http.Request) {
 
 // Data Model
 type Data struct {
-	Motive *config.Motive
+	Motive *config.MotiveConf
 	Image  *flickr.Image
 }

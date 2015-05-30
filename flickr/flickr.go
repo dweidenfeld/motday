@@ -18,8 +18,7 @@ const baseURL = "https://api.flickr.com/services/rest/?"
 
 // Flickr represents a connection
 type Flickr struct {
-	apiKey    string
-	apiSecret string
+	apiKey string
 }
 
 // Image represents an image
@@ -64,16 +63,16 @@ type Photo struct {
 }
 
 // New creates a new instance of Flickr
-func New(apiKey string, apiSecret string) *Flickr {
-	return &Flickr{apiKey, apiSecret}
+func New(apiKey string) *Flickr {
+	return &Flickr{apiKey}
 }
 
 // SearchRandom searches for an image and returns a random one
 func (f *Flickr) SearchRandom(query string) (*Image, error) {
-	var image Image
+	image := Image{}
 	url := f.buildRequest("flickr.photos.search",
-		[2]string{"text", query},
-		[2]string{"per_page", "200"},
+		[2]string{"tags", query},
+		[2]string{"per_page", "400"},
 		[2]string{"is_getty", "true"},
 		[2]string{"extras", "url_l,url_o,o_dims"})
 	var rsp Rsp
@@ -92,21 +91,32 @@ func (f *Flickr) SearchRandom(query string) (*Image, error) {
 		return nil, errors.New("no images found after " +
 			strconv.Itoa(retries) + " retries\n")
 	}
-	for i := 0; i < 100; i++ {
-		photo := rsp.Photos.Photos[random(0, len(rsp.Photos.Photos))]
-		if "" != photo.URLO {
-			image.URL = photo.URLO
-			image.Width = photo.WidthO
-			image.Height = photo.HeightO
-			break
-		} else if "" != photo.URLL {
-			image.URL = photo.URLL
-			image.Width = photo.WidthL
-			image.Height = photo.HeightL
+	photoCount := len(rsp.Photos.Photos)
+	for i := 0; i < photoCount; i++ {
+		photo := rsp.Photos.Photos[random(0, photoCount)]
+		image = photo.toImage()
+		if image.Width > image.Height {
 			break
 		}
 	}
+	if "" == image.URL && photoCount > 0 {
+		image = rsp.Photos.Photos[0].toImage()
+	}
 	return &image, nil
+}
+
+func (p *Photo) toImage() Image {
+	i := Image{}
+	if "" != p.URLO {
+		i.URL = p.URLO
+		i.Width = p.WidthO
+		i.Height = p.HeightO
+	} else if "" != p.URLL {
+		i.URL = p.URLL
+		i.Width = p.WidthL
+		i.Height = p.HeightL
+	}
+	return i
 }
 
 func random(min, max int) int {
